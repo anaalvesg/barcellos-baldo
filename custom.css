@@ -2,9 +2,39 @@
 
 :root {
     font-family: 'Urbanist', Arial, Helvetica, sans-serif;
+    --white: #fff;
+    --black: #000;
+    --blue: #1F4EB3;
+    --darkBlue: #0E1D3C;
+    --blueFooter: #071022;
+    --greenBtn: #1FB335;
 }
 
 * {
     margin: 0;
     padding: 0;
 }
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* css da pagina */
+/* ajeita grid para espaçamento */
+
+/* @media (min-width: 992px) {
+
+    #faq .faqQuestions,
+    #solution .city {
+        grid-column: 7 / span 6;
+        position: relative;
+    }
+
+    #descarte .descarteInfos {
+        grid-column: 8 / span 5;
+    }
+} */
