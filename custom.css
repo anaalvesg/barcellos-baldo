@@ -47,11 +47,18 @@ header {
     height: 57px;
 }
 
-.mainHeader nav, .mainHeader nav ul {
+.mainHeader nav {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+ .mainHeader nav ul {
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
+    align-items: center;
+ }
 
 .mainHeader nav {
     justify-content: space-between;
@@ -200,4 +207,89 @@ header {
     width: 24px;
     height: 24px;
     aspect-ratio: 1/1;
+}
+
+/* FOOTER */
+.boxFooter {
+    width: 100%;
+    background: linear-gradient(100deg, #142E64 0.02%, #0E1D3C 99.98%);
+
+}
+
+.footerWrapper {
+    height: 434px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    justify-content: space-around;
+}
+
+.footerWrapper img {
+    width: 315px;
+    height: 68.118px;
+}
+
+.boxFooter .footerWrapper .navigation, .boxFooter .footerWrapper .infos {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.boxFooter .footerWrapper .navigation h3, .boxFooter .footerWrapper .infos h3 {
+    color: var(--white);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.boxFooter .footerWrapper .navigation ul, .boxFooter .footerWrapper .infos ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* FOOTER COPYRIGHTS */
+
+footer .copyrights {
+    width: 100%;
+    height: 40px;
+    background-color: var(--blueFooter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .copyrights a {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+footer .copyrights span {
+    color: var(--white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 137.5% */
+}
+
+footer .copyrights p {
+    color: var(--white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
 }
