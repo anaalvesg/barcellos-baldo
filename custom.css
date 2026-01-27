@@ -153,3 +153,51 @@ header {
     background: rgba(217, 217, 217, 0.13);
     backdrop-filter: blur(4.400000095367432px);
 }
+
+#mainSection .form .formInfo {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+#mainSection .form h3 {
+    color: var(--white);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#mainSection .form label {
+    color: var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+/* BTN WPP PADRAO */
+
+.whatsBtn {
+    border-radius: 2px;
+    background-color: var(--greenBtn);
+    color: var(--white);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsBtn img {
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1/1;
+}
