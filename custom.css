@@ -335,36 +335,36 @@ header {
 
 /* ATUACAO */
 
-#perfomance {
+#performance {
     width: 100%;
     margin-top: 110px;
 }
 
-#perfomance .pfBox .pfContent > div {
+#performance .pfBox .pfContent > div {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#perfomance .pfBox .pfContent h2 {
+#performance .pfBox .pfContent h2 {
     color: var(--black);
 } 
 
-#perfomance .pfBox .pfContent p {
+#performance .pfBox .pfContent p {
     color: var(--black);
 }
 
-#perfomance .pfBox .pfContent .whatsBtn {
+#performance .pfBox .pfContent .whatsBtn {
     width: 60%;
 }
 
-#perfomance .pfBox .pfContent .numbers {
+#performance .pfBox .pfContent .numbers {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
 
-#perfomance .pfBox .pfContent .numbers h3 {
+#performance .pfBox .pfContent .numbers h3 {
     color: var(--blue);
     font-size: 32px;
     font-style: normal;
@@ -372,7 +372,7 @@ header {
     line-height: 56px; /* 175% */
 }
 
-#perfomance .pfBox .pfContent .numbers p {
+#performance .pfBox .pfContent .numbers p {
     color: var(--black);
     font-size: 18px;
     font-style: normal;
@@ -627,8 +627,93 @@ footer .copyrights p {
     line-height: 22px;
 }
 
+
+/* MOBILE */
+
 @media (max-width: 992px) {
     .hideOnMobile {
         display: none !important;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .whatsBtn {
+        width: 100% !important;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .whatsBtn:hover {
+        transform: none;
+    }
+
+    #mainSection .titleBox h1 {
+        font-size: 36px;
+        line-height: normal;
+    }
+
+    #mainSection .titleBox p, #mainSection .titleBox ul {
+        font-size: 16px;
+    }
+
+    #delayedDelivery {
+        padding-inline: 25px;
+        margin-top: 80px;
+    }
+
+    #lawGuarantee {
+        padding: 45px 25px;
+    }
+
+    #performance {
+        margin-top: 80px;
+        padding-inline: 25px;
+    }
+
+    #performance .pfBox .pfContent .numbers h3 {
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    #performance .pfBox .pfContent .numbers p {
+        font-size: 16px;
+    }
+
+    #performance .pfBox .pfContent .numbers {
+        gap: 15px;
+    }
+
+    #choose h2 {
+        width: auto;
+    }
+
+    #choose .cardWrapper .chooseCards h3 {
+        font-size: 20px;
+    }
+
+    #cta .cta {
+        height: auto;
+        margin-top: 110px;
+    }
+
+    #cta .cta .callToAction h2 {
+        font-size: 32px;
+    }
+
+    #cta .cta .callToAction p {
+        font-size: 16px;
+    }
+
+    footer .copyrights {
+        padding: 10px;
+        height: auto;
     }
 }
