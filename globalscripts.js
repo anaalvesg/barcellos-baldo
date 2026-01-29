@@ -1,4 +1,9 @@
-AOS.init();
+// DATA AOS
+AOS.init({
+  once: true,
+  // duration: 800,
+  easing: 'ease-out-cubic'
+});
 
 // Update Year 
   function updateYear() {
@@ -135,5 +140,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //  TROCAR IMG
-
-// DATA-AOS
