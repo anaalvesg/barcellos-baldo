@@ -6,7 +6,7 @@
 
   updateYear();
 
-// GSAP
+// GSAP ANIMACAO CARDS
 gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia();
@@ -32,7 +32,7 @@ mm.add("(min-width: 992px)", () => {
   );
 });
 
-// TROCAR LINK WPP WEB POR WPP APP
+// LINK WPP DINAMICO
 document.addEventListener("DOMContentLoaded", () => {
   const screenWidth = window.innerWidth;
   const whatsLinks = document.querySelectorAll(".whatsBtn");
@@ -81,3 +81,55 @@ ${situation ? "Situação: " + situation : ""}
   window.open(whatsappURL, "_blank");
 });
 
+// FLICKITY CARROSSEL
+let carouselBanner = document.querySelector('#reviews .carouselBanner');
+flktyBanner = new Flickity(carouselBanner, {
+    // imagesLoaded: true,
+    cellAlign: "left",
+    contain: true,
+    wrapAround: true,
+    pageDots: false,
+});
+
+// MENU MOBILE 
+function toggleMenu() {
+  const mobileMenu = document.getElementById("mobileMenu");
+  const body = document.querySelector("body");
+  const menuOverlay = document.getElementById("menuOverlay");
+
+  if (mobileMenu.classList.contains("active")) {
+      mobileMenu.classList.remove("active");
+      menuOverlay.classList.remove("active");
+      setTimeout(() => {
+          mobileMenu.style.display = "none";
+      }, 300);
+      body.style.overflowY = "scroll";
+  } else {
+      mobileMenu.style.display = "block";
+      menuOverlay.classList.add("active");
+      setTimeout(() => {
+          mobileMenu.classList.add("active");
+      }, 10);
+      body.style.overflowY = "hidden";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openMenu = document.querySelector(".openMenuBtn");
+  const closeMenu = document.querySelector(".closeMenuBtn");
+  const menuOverlay = document.getElementById("menuOverlay");
+
+  openMenu.addEventListener("click", () => {
+    toggleMenu();
+  })
+  
+  closeMenu.addEventListener("click", () => {
+    toggleMenu();
+  })
+
+  menuOverlay.addEventListener("click", () => {
+    toggleMenu();
+  })
+});
+
+//  TROCAR IMG

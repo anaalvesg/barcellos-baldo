@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="bootstrapgrid.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="midias/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="print" onload="this.media='all'">
+<noscript>
+  <link rel="preload" as="style" href="https://unpkg.com/flickity@2/dist/flickity.min.css" onload="this.rel='stylesheet'"></noscript>
 </head>
 
 <body>
     <header>
-        <div class="container mainHeader" style="background-color: black;">
-            <img src="midias/images/logo-barcellos-baldo.png" alt="Logo Barcellos Baldo Advogado">
+        <div class="container mainHeader">
+            <img class="logo" src="midias/images/logo-barcellos-baldo.png" alt="Logo Barcellos Baldo Advogado">
             <nav>
                 <ul>
                     <li><a href="#mainSection">Inicial</a></li>
@@ -24,19 +27,41 @@
                     <li><a href="#performance">Atuação</a></li>
                     <li><a href="#reviews">Depoimentos</a></li>
                 </ul>
-                <div class="wpp">
+                <div class="wpp hideOnMobile">
                     <a class="whatsBtn" href="https://web.whatsapp.com/send/?phone=5541988511194&text=Ol%C3%A1%21+Venho+atrav%C3%A9s+do+website+Direito+Imobili%C3%A1rio+e+quero+saber+mais+sobre+Atrasos+na+Entrega+do+Im%C3%B3vel.&type=phone_number&app_absent=0" title="Enviar mensagem para o WhatsApp de Barcellos Baldo Advogado">
                         <img src="midias/icons/whatsapp.svg" alt="Ícone WhatsApp"> Atendimento
                     </a>
                 </div>
             </nav>
+            <!-- <button class="openMenuBtn">
+                <img src="midias/icons/icone-menu.svg" alt="Ícone Menu" width="40" height="40">
+            </button> -->
         </div>
     </header>
+
+    <!-- MOBILE MENU -->
+    <!-- <div id="mobileMenu">
+        <button class="closeMenuBtn">Fechar menu</button>
+        <nav>
+            <ul>
+                <li><a href="#mainSection">Inicial</a></li>
+                <li><a href="#lawGuarantee">Garantia da Lei</a></li>
+                <li><a href="#performance">Atuação</a></li>
+                <li><a href="#reviews">Depoimentos</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="fixedCorrection"></div>
+    <div id="menuOverlay"></div> -->
 
     <main>
         <!-- SEÇAO PRINCIPAL -->
         <section id="mainSection">
-            <div class="container">
+            <video autoplay muted loop playsinline>
+                <source src="midias/video/video-banner.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+            <div class="container content">
                 <div class="row">
                     <div class="col-lg-7 col-12 titleBox">
                         <h1>Defenda seus direitos e receba indenização pelo atraso da construtora</h1>
@@ -232,22 +257,115 @@
                                 <button><img src="midias/icons/right-arrow.svg" alt="Ícone Seta Direita"></button>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-12 rvCardWrapper">
+                        <div class="col-lg-1"></div>
+                        <div class="rvCardWrapper">
+
                             <div class="rvCard">
-                                <div>
+                                <div class="googleImg">
                                     <img src="midias/icons/icon-google.png" alt="Ícone Google">
                                 </div>
                                 <div class="cardContent">
-                                    <div class="rating">
+                                    <div class="identity">
                                         <h3>Wesley Batista</h3>
-                                        <img src="midias/icons/star.svg" alt="">
+                                        <div class="rating">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                        </div>
                                     </div>
                                     <p class="review">
                                         Excelente serviço de advocacia. Atendimento super rápido, claro e muito eficiente. Sempre que preciso recorro a eles.
                                     </p>
-                                    <p class="date">15/09/2023</p>
+                                    <p class="dateReview">15/09/2023</p>
                                 </div>
                             </div>
+                            <div class="rvCard">
+                                <div class="googleImg">
+                                    <img src="midias/icons/icon-google.png" alt="Ícone Google">
+                                </div>
+                                <div class="cardContent">
+                                    <div class="identity">
+                                        <h3>Gabriel Guilhermino</h3>
+                                        <div class="rating">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                        </div>
+                                    </div>
+                                    <p class="review">
+                                        Gosto muito do atendimento do Daniel, sempre atencioso e claro nas informações de que preciso!!
+                                    </p>
+                                    <p class="dateReview">15/09/2023</p>
+                                </div>
+                            </div>
+                            <div class="rvCard">
+                                <div class="googleImg">
+                                    <img src="midias/icons/icon-google.png" alt="Ícone Google">
+                                </div>
+                                <div class="cardContent">
+                                    <div class="identity">
+                                        <h3>Mauricio Beck</h3>
+                                        <div class="rating">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                        </div>
+                                    </div>
+                                    <p class="review">
+                                        Atuei em alguns casos com o Dr. Baldo, profissional extremamente diferenciado e altamente qualificado. Recomendo com louvor.
+                                    </p>
+                                    <p class="dateReview">15/09/2023</p>
+                                </div>
+                            </div>
+                            <div class="rvCard">
+                                <div class="googleImg">
+                                    <img src="midias/icons/icon-google.png" alt="Ícone Google">
+                                </div>
+                                <div class="cardContent">
+                                    <div class="identity">
+                                        <h3>Angela Souza</h3>
+                                        <div class="rating">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                        </div>
+                                    </div>
+                                    <p class="review">
+                                        O escritório Barcellos Baldo Advocacia, que conheço há 10 anos, é exemplar em todos os aspectos. Sua equipe altamente qualificada e comprometida sempre oferece suporte excepcional, demonstrando expertise jurídica de alto nível.
+                                    </p>
+                                    <p class="dateReview">17/09/2023</p>
+                                </div>
+                            </div>
+                            <div class="rvCard">
+                                <div class="googleImg">
+                                    <img src="midias/icons/icon-google.png" alt="Ícone Google">
+                                </div>
+                                <div class="cardContent">
+                                    <div class="identity">
+                                        <h3>Carolina</h3>
+                                        <div class="rating">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                            <img src="midias/icons/star.svg" alt="Ícone Estrelas">
+                                        </div>
+                                    </div>
+                                    <p class="review">
+                                        Recomendo o Dr Daniel sem reservas. Sua competência, dedicação e comprometimento com os interesses de seus clientes são notáveis.
+                                    </p>
+                                    <p class="dateReview">15/09/2023</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
