@@ -1,3 +1,5 @@
+AOS.init();
+
 // Update Year 
   function updateYear() {
     const target = document.getElementById("ano");
@@ -7,30 +9,30 @@
   updateYear();
 
 // GSAP ANIMACAO CARDS
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-const mm = gsap.matchMedia();
+// const mm = gsap.matchMedia();
 
-mm.add("(min-width: 992px)", () => {
-  const cards = gsap.utils.toArray(".chooseCards");
+// mm.add("(min-width: 992px)", () => {
+//   const cards = gsap.utils.toArray(".chooseCards");
 
-  gsap.fromTo(
-    cards,
-    { opacity: 0, x: -40 },
-    {
-      opacity: 1,
-      x: 0,
-      duration: 0.2,
-      ease: "power2.out",
-      stagger: 0.25,
-      scrollTrigger: {
-        trigger: "#choose",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    }
-  );
-});
+//   gsap.fromTo(
+//     cards,
+//     { opacity: 0, x: -40 },
+//     {
+//       opacity: 1,
+//       x: 0,
+//       duration: 0.2,
+//       ease: "power2.out",
+//       stagger: 0.25,
+//       scrollTrigger: {
+//         trigger: "#choose",
+//         start: "top 80%",
+//         toggleActions: "play none none none"
+//       }
+//     }
+//   );
+// });
 
 // LINK WPP DINAMICO
 document.addEventListener("DOMContentLoaded", () => {
@@ -133,3 +135,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //  TROCAR IMG
+
+// DATA-AOS
